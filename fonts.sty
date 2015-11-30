@@ -1,0 +1,49 @@
+%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fonts}[2015/02/09 v0.1 Font Settings for LuaTeX]
+\RequirePackage{luatexja-fontspec}
+
+\DeclareOption{TeXGyrePagella}{
+	\setmainfont{TeX Gyre Pagella}
+	\setsansfont{Droid Sans}
+	\setmonofont{CMU Typewriter Text}
+}
+
+\DeclareOption{TeXGyreTermes}{
+	\setmainfont{TeX Gyre Termes}
+	\setsansfont{Droid Sans}
+	\setmonofont{CMU Typewriter Text}
+}
+
+\DeclareOption{CMU}{
+	\setmainfont{CMU Serif}
+	\setsansfont{CMU Sans Serif}
+	\setmonofont{CMU Typewriter Text}
+}
+
+\DeclareOption{Libertine}{
+	\setmainfont{Linux Libertine O}
+	\setsansfont{Droid Sans}
+	\setmonofont{CMU Typewriter Text}
+}
+
+\DeclareOption{Fandol}{
+	\setmainjfont{FandolSong-Regular}[BoldFont={FandolSong-Bold}, ItalicFont={FandolKai-Regular}]
+	\setsansjfont{FandolHei-Regular}[BoldFont={FandolHei-Bold}]
+	\newjfontface\kai{FandolKai-Regular}
+	\newjfontface\fang{FandolFang-Regular}
+}
+
+\DeclareOption{Adobe}{
+	\setmainjfont{AdobeSongStd-Light}[BoldFont={AdobeHeitiStd-Regular}, ItalicFont={AdobeKaitiStd-Regular}]
+	\setsansjfont{AdobeHeitiStd-Regular}[BoldFont={AdobeHeitiStd-Regular}]
+	\newjfontface\kai{AdobeHeitiStd-Regular}
+	\newjfontface\fang{AdobeFangsongStd-Regular}
+}
+
+\ProcessOptions\relax
+\endinput
+
+%%
+%% End of file 'luatexja-fonts.sty'
